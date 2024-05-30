@@ -8,6 +8,8 @@
     <meta name="description" content="Responsive Website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- javascript -->
+    <script defer src="./js/script.js"></script>
 </head>
 
 <body>
@@ -46,7 +48,7 @@
     <section class="section-biodata section">
         <div class="container grid grid-two-column">
             <div class="bio-image">
-                <img src="./images/bio.jpg" alt="Bio Image" />
+                <img src="./images/biodata.jpg" alt="Bio Image" />
             </div>
             <!-- bio right side data -->
             <div class="bio-data">
@@ -65,43 +67,102 @@
                     <div class="bio-stats">
                         <h3>Design</h3>
                         <div class="bio-progress-bar">
-                            <span>70%</span>
+                            <span>80%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
-                        <h3>Design</h3>
+                        <h3>HTML</h3>
                         <div class="bio-progress-bar bio-progress-2">
-                            <span>90%</span>
+                            <span>99%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
                         <h3>CSS</h3>
                         <div class="bio-progress-bar bio-progress-3">
-                            <span>80%</span>
+                            <span>88%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
                         <h3>JavaScript</h3>
                         <div class="bio-progress-bar bio-progress-4">
-                            <span>80%</span>
+                            <span>75%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
-                        <h3>UI/UX</h3>
+                        <h3>MERN</h3>
                         <div class="bio-progress-bar bio-progress-5">
                             <span>70%</span>
                         </div>
                     </div>
-                    <div class="btn bio-data-btn">
-                        <a href="#">Download Cv</a>
-                    </div>
+
+                </div>
+                <div class="bio-data-btn">
+                    <a href="#" class="btn">Download Cv</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio section -->
+    <section class="section section-portfolio" id="portfolio-section">
+        <div class="container">
+            <h2 class="common-heading">Latest Work</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente blanditiis ducimus odit, provident
+                modi perferendis ratione voluptates laudantium natus asperiores.
+            </p>
+        </div>
+        <div class="p-btns">
+            <div class="btn p-btn" data-btn-num="1">Website</div>
+            <div class="btn p-btn" data-btn-num="2">Youtube</div>
+            <div class="btn p-btn" data-btn-num="3">graphics</div>
+        </div>
+
+        <div class="container grid grid-three-column portfolio-images">
+            <div class="img-overlay p-btn--1">
+                <img src="images/folio/1.jpg" loading="lazy" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project
+                        1</a>
+                </div>
+            </div>
+
+            <div class="img-overlay p-btn--3">
+                <img src="images/folio/4.jpg" loading="lazy" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 2</a>
+                </div>
+            </div>
+
+            <div class="img-overlay p-btn--1">
+                <img src="images/folio/3.jpg" loading="lazy" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 3</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1 p-btn--2">
+                <img src="images/folio/4.jpg" loading="lazy" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 4</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--2">
+                <img src="images/folio/5.jpg" loading="lazy" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 5</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1">
+                <img src="images/folio/1.jpg" loading="lazy" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 6</a>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <script src="./js/script.js" async defer></script>
+
 </body>
 
 </html>
