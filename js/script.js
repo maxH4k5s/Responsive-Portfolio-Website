@@ -50,3 +50,41 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
 });
+
+
+// scroll to top button
+const heroSection = document.querySelector(".section-hero")
+const footerElem = document.querySelector(".section-footer")
+const scrollElement = document.createElement("div");
+scrollElement.classList.add("scrollTop-style");
+
+scrollElement.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll-top"></ion-icon>`
+
+footerElem.after(scrollElement);
+
+const scrollTop = () => {
+    heroSection.scrollIntoView({ behavior: "smooth" })
+}
+
+scrollElement.addEventListener("click", scrollTop);
+
+
+// counter number
+const counterNum = document.querySelectorAll(".counter-numbers");
+const speed = 200;
+
+counterNum.forEach((curElem) => {
+    const updateNum = () => {
+        const targetNum = parseInt(curElem.dataset.number);
+        // console.log(targetNum);
+        const initialNum = parseInt(curElem.innerText);
+        // console.log(initialNum)
+        const incrementNumber = Math.trunc(targetNum / speed);
+        if (initialNum < targetNum) {
+            curElem.innerText = `${initialNum + incrementNumber}+`;
+            setTimeout(updateNum, 10);
+        }
+    };
+
+    updateNum();
+})
