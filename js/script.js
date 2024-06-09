@@ -3,6 +3,15 @@ const port_btn = document.querySelector(".p-btns");
 const p_btn = document.querySelectorAll(".p-btn");
 const img_div = document.querySelectorAll(".img-overlay");
 
+// navbar
+const mobile_nav = document.querySelector(".mobile-navbar-btn");
+const headerElem = document.querySelector(".header");
+
+mobile_nav.addEventListener('click', () => {
+    headerElem.classList.toggle('active')
+})
+
+
 port_btn.addEventListener("click", (e) => {
     // console.log(e.target);
 
@@ -38,7 +47,7 @@ port_btn.addEventListener("click", (e) => {
 
 
 // swiper slider
-var swiper = new Swiper(".mySwiper", {
+new Swiper(".mySwiper", {
     slidesPerView: 2,
     spaceBetween: 30,
     autoplay: {
@@ -50,6 +59,27 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
 });
+
+const myJsmedia = (widthSize) => {
+    if (widthSize.matches) {
+        new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+
+        });
+    } else {
+        new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        });
+    }
+}
+
+const widthSize = window.matchMedia("(max-width: 780px)");
+// call listener function at run time
+myJsmedia(widthSize);
+// attach listener function on state
+widthSize.addEventListener("change", myJsmedia);
 
 
 // scroll to top button
@@ -88,3 +118,20 @@ counterNum.forEach((curElem) => {
 
     updateNum();
 })
+
+// lazy loading images
+const imgRef = document.querySelector("img[data-src]");
+
+const lazyImg = (entries) => {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    entry.target.src = imgRef.dataset.src;
+
+}
+
+const imgObserver = new IntersectionObserver(lazyImg, {
+    root: null,
+    threshold: 0,
+});
+
+imgObserver.observe(imgRef);
