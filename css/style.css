@@ -260,6 +260,10 @@ li {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .img-overlay .overlay .common-heading {
+        font-size: 3.6rem;
+    }
+
     /* resume section */
     .section-resume .grid-two-column {
         grid-template-columns: 1fr;
@@ -304,7 +308,7 @@ li {
     }
 
     .section-hero img {
-        width: 70%;
+        width: 80%;
     }
 
     /* biodata section */
@@ -329,6 +333,10 @@ li {
     .section-work-data .grid-four-column {
         grid-template-columns: 1fr 1fr;
     }
+
+    .img-overlay .overlay .common-heading {
+        font-size: 3.2rem;
+    }
 }
 
 /* below 560px */
@@ -337,6 +345,10 @@ li {
     /* .container {
         max-width: 48rem;
     } */
+
+    .section-hero img {
+        width: 100%;
+    }
 
     .header {
         padding: 0 3.2rem;
@@ -395,6 +407,18 @@ li {
         margin: 0 1rem;
     }
 
+    .img-overlay .overlay .common-heading {
+        font-size: 2.4rem;
+    }
+
+}
+
+/* belo 454 */
+@media (max-width: 28em) {
+
+    .resume-data-right {
+        gap: 0rem;
+    }
 }
 
 
@@ -854,11 +878,11 @@ li {
     font-size: 1.3rem;
     text-transform: uppercase;
     color: var(--helper);
-    padding: 0.3rem 0;
+    padding: 0.3rem 1rem;
     min-width: 50%;
     background: #f3f4ff;
     border-radius: 10rem;
-    justify-content: center;
+    justify-content: end;
     margin-bottom: 0.5rem;
 }
 
