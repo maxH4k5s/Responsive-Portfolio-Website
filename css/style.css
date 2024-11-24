@@ -72,6 +72,10 @@ h1 {
     font-weight: 600;
 }
 
+.left{
+    text-align: left;
+}
+
 h3 {
     font-size: 1.8rem;
     font-weight: 400;
